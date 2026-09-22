@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV — Martha Saulina Nababan | Web &amp; AI Enthusiast</title>
+    <meta
+      name="description"
+      content="CV digital Martha Saulina Nababan, mahasiswa Informatika yang tertarik pada pengembangan web dan penerapan AI."
+    />
+    <link rel="icon" type="image/png" href="assets/img/Logo.jpg" />
+
+    <!-- Halaman ini memakai Tailwind CSS 4 (utility class + @theme) via CDN. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts dimuat non-blocking: teks tetap tampil dengan fallback
+         sans-serif lalu berganti ke Plus Jakarta Sans / Inter. -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      />
+    </noscript>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.3"></script>
+    <!-- Design token brand Saulina AI (@theme) — disamakan dengan landing & blog -->
+    <style type="text/tailwindcss">
+      @theme {
+        --color-ink: #211a2e;
+        --color-night: #170f26;
+        --color-paper: #faf9fc;
+        --color-accent: #7c3aed;
+        --color-accent-light: #a78bfa;
+        --color-accent-soft: #f3edfe;
+        --color-line: #e6e1ee;
+
+        --font-display: "Plus Jakarta Sans", sans-serif;
+        --font-body: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-paper text-ink font-body">
+    <!-- ===== NAVBAR ===== -->
+    <header class="bg-night text-paper">
+      <nav class="max-w-4xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2" aria-label="Navigasi utama">
+        <a href="index.html" class="flex items-center gap-2 font-display font-bold text-lg">
+          <img src="assets/img/Logo.jpg" alt="" width="32" height="32" class="w-8 h-8 rounded-lg" />
+          <span>Saulina<span class="text-accent-light">.AI</span></span>
+        </a>
+        <ul class="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm text-slate-300">
+          <li><a href="index.html" class="hover:text-white transition">Landing Page</a></li>
+          <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+          <li><a href="cv.html" class="text-white font-medium" aria-current="page">CV</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===== HEADER PROFIL ===== -->
+      <!-- Catatan: ganti assets/img/cv-avatar.png dengan foto profil aslimu -->
+      <section class="bg-accent-soft border-b border-line">
+        <div class="max-w-4xl mx-auto px-4 py-10 flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+          <picture>
+            <img
+              src="assets/img/Foto.jpeg"
+              alt="Foto Martha Saulina Nababan"
+              width="256"
+              height="256"
+              fetchpriority="high"
+              decoding="async"
+              class="w-32 h-32 rounded-full object-cover border-4 border-white shadow-sm"
+            />
+          </picture>
+          <div class="text-center sm:text-left">
+            <h1 class="font-display text-3xl font-bold text-ink">Martha Saulina Nababan</h1>
+            <p class="mt-1 text-accent font-semibold">
+              Mahasiswa Informatika &middot; Web &amp; AI Enthusiast
+            </p>
+
+            <ul class="mt-4 flex flex-wrap justify-center sm:justify-start gap-x-5 gap-y-2 text-sm text-ink/80">
+              <li>
+                <a href="mailto:marthanababan19@gmail.com" class="flex items-center gap-1.5 hover:text-accent transition">
+                  <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> marthanababan19@gmail.com
+                </a>
+              </li>
+              <li class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg> +62 813-7522-9731
+              </li>
+              <li class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg> Laguboti, Toba, Sumatera Utara
+              </li>
+              <li>
+                <a href="#" class="flex items-center gap-1.5 hover:text-accent transition">
+                  <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg> GitHub
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center gap-1.5 hover:text-accent transition">
+                  <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="max-w-4xl mx-auto px-4 py-10 flex flex-col gap-10">
+        <!-- ===== RINGKASAN ===== -->
+        <section>
+          <h2 class="font-display text-xl font-bold text-ink mb-3 pb-2 border-b-2 border-accent inline-block">
+            Ringkasan
+          </h2>
+          <p class="text-ink/75 leading-relaxed max-w-3xl">
+            Mahasiswa Informatika yang tertarik pada pengembangan web dan penerapan
+            kecerdasan buatan untuk menyelesaikan masalah nyata. Terbiasa membangun
+            antarmuka dengan HTML, CSS, Bootstrap, dan Tailwind, serta mulai
+            mengeksplorasi integrasi model AI ke dalam aplikasi web sederhana.
+          </p>
+        </section>
+
+        <div class="grid md:grid-cols-3 gap-10">
+          <!-- ===== KOLOM UTAMA ===== -->
+          <div class="md:col-span-2 flex flex-col gap-10">
+            <!-- Pendidikan -->
+            <section>
+              <h2 class="font-display text-xl font-bold text-ink mb-4 pb-2 border-b-2 border-accent inline-block">
+                Pendidikan
+              </h2>
+              <div class="flex flex-col gap-5">
+                <div class="border-l-2 border-line pl-5 relative">
+                  <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-accent"></span>
+                  <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+                    <h3 class="font-semibold text-ink">S1 Informatika — Institut Teknologi Del</h3>
+                    <span class="text-sm text-ink/70">Agt 2024 — Sekarang</span>
+                  </div>
+                  <p class="text-sm text-ink/70">Sitoluama, Laguboti</p>
+                </div>
+                <div class="border-l-2 border-line pl-5 relative">
+                  <span class="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-line"></span>
+                  <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+                    <h3 class="font-semibold text-ink">SMA Negeri 2 Siborongborong</h3>
+                    <span class="text-sm text-ink/70">2022 — 2024</span>
+                  </div>
+                  <p class="text-sm text-ink/70">Jurusan MIPA</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Proyek Kuliah -->
+            <section>
+              <h2 class="font-display text-xl font-bold text-ink mb-4 pb-2 border-b-2 border-accent inline-block">
+                Proyek Kuliah
+              </h2>
+
+              <div class="flex flex-col gap-6">
+                <article class="border-l-2 border-line pl-5">
+                  <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+                    <h3 class="font-semibold text-ink">Landing Page Saulina AI</h3>
+                    <span class="text-sm text-ink/70">2026</span>
+                  </div>
+                  <p class="text-sm text-ink/70 mt-1">
+                    Landing page perusahaan jasa AI untuk tugas praktikum PABWE,
+                    dibangun dengan HTML &amp; CSS murni.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="font-medium text-xs px-2 py-1 rounded bg-accent-soft text-accent">HTML</span>
+                    <span class="font-medium text-xs px-2 py-1 rounded bg-accent-soft text-accent">CSS</span>
+                  </div>
+                </article>
+
+                <article class="border-l-2 border-line pl-5">
+                  <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+                    <h3 class="font-semibold text-ink">Blog Riset AI Saulina AI</h3>
+                    <span class="text-sm text-ink/70">2026</span>
+                  </div>
+                  <p class="text-sm text-ink/70 mt-1">
+                    Daftar dan halaman detail artikel riset AI, dibangun dengan
+                    Bootstrap 5 dan Bootstrap Icons.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mt-3">
+                    <span class="font-medium text-xs px-2 py-1 rounded bg-accent-soft text-accent">Bootstrap 5</span>
+                    <span class="font-medium text-xs px-2 py-1 rounded bg-accent-soft text-accent">Bootstrap Icons</span>
+                  </div>
+                </article>
+
+                <!-- Proyek tambahan: bagian dari repo praktikum ini -->
+                <article class="border-l-2 border-line pl-5">
+                  <h3 class="font-semibold text-ink">CV Digital Saulina AI (halaman ini)</h3>
+                  <p class="text-sm text-ink/70 mt-1">
+                    Dibangun dengan Tailwind CSS 4, melengkapi landing page dan blog
+                    pada rangkaian tugas praktikum yang sama.
+                  </p>
+                  <div class="flex flex-wrap gap-3 mt-2 text-sm">
+                    <a href="index.html" class="text-accent font-medium hover:underline">Lihat Landing Page</a>
+                    <a href="blog.html" class="text-accent font-medium hover:underline">Lihat Blog</a>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <!-- Pengalaman -->
+            <section>
+              <h2 class="font-display text-xl font-bold text-ink mb-4 pb-2 border-b-2 border-accent inline-block">
+                Pengalaman
+              </h2>
+              <div class="flex flex-col gap-5">
+                <div class="border-l-2 border-line pl-5">
+                  <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+                    <h3 class="font-semibold text-ink text-sm">Anggota Tim Proyek Kompetisi Nasional GEMASTIK</h3>
+                    <span class="text-xs text-ink/70">2025 — Sekarang</span>
+                  </div>
+                  <p class="text-sm text-ink/70 mt-1">
+                    Mengembangkan platform web interaktif untuk pelestarian budaya
+                    Batak Toba, sebagai entri kategori UI/UX.
+                  </p>
+                </div>
+                <div class="border-l-2 border-line pl-5">
+                  <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+                    <h3 class="font-semibold text-ink text-sm">Peserta Bootcamp Nalara Academy</h3>
+                    <span class="text-xs text-ink/70">2026</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- ===== SIDEBAR ===== -->
+          <div class="flex flex-col gap-8">
+            <!-- Keahlian -->
+            <section>
+              <h2 class="font-display text-lg font-bold text-ink mb-3 pb-2 border-b-2 border-accent inline-block">
+                Keahlian
+              </h2>
+
+              <p class="text-xs font-semibold uppercase tracking-wide text-ink/70 mt-3 mb-2">Hard skills</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="font-medium text-xs px-2.5 py-1 rounded bg-white border border-line text-ink/80">HTML</span>
+                <span class="font-medium text-xs px-2.5 py-1 rounded bg-white border border-line text-ink/80">CSS</span>
+                <span class="font-medium text-xs px-2.5 py-1 rounded bg-white border border-line text-ink/80">Bootstrap 5</span>
+                <span class="font-medium text-xs px-2.5 py-1 rounded bg-white border border-line text-ink/80">Python</span>
+              </div>
+
+              <p class="text-xs font-semibold uppercase tracking-wide text-ink/70 mt-4 mb-2">Soft skills</p>
+              <div class="flex flex-wrap gap-2 text-sm text-ink/70">
+                <span>Komunikasi Efektif</span><span class="text-ink/30">&middot;</span>
+                <span>Kerja Tim</span><span class="text-ink/30">&middot;</span>
+                <span>Kreativitas</span><span class="text-ink/30">&middot;</span>
+                <span>Tanggung Jawab</span>
+              </div>
+
+              <p class="text-xs font-semibold uppercase tracking-wide text-ink/70 mt-4 mb-2">Software</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="font-medium text-xs px-2.5 py-1 rounded bg-white border border-line text-ink/80">VS Code</span>
+                <span class="font-medium text-xs px-2.5 py-1 rounded bg-white border border-line text-ink/80">GitHub</span>
+                <span class="font-medium text-xs px-2.5 py-1 rounded bg-white border border-line text-ink/80">Figma</span>
+              </div>
+            </section>
+
+            <!-- Bahasa -->
+            <!-- Catatan: level kemahiran Bahasa Inggris masih placeholder, sesuaikan sendiri -->
+            <section>
+              <h2 class="font-display text-lg font-bold text-ink mb-3 pb-2 border-b-2 border-accent inline-block">
+                Bahasa
+              </h2>
+              <ul class="text-sm text-ink/70 space-y-1">
+                <li class="flex justify-between"><span>Indonesia</span><span class="text-ink/70">Bahasa Ibu</span></li>
+                <li class="flex justify-between"><span>Inggris</span><span class="text-ink/70">(isi levelmu)</span></li>
+              </ul>
+            </section>
+
+            <!-- Sertifikat & Penghargaan -->
+            <section>
+              <h2 class="font-display text-lg font-bold text-ink mb-3 pb-2 border-b-2 border-accent inline-block">
+                Sertifikat &amp; Penghargaan
+              </h2>
+              <div class="flex flex-col gap-3">
+                <div class="flex items-start gap-2 text-sm text-ink/70">
+                  <svg class="w-4 h-4 shrink-0 text-accent mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  <span>Sertifikat Bootcamp Nalara Academy — 2026</span>
+                </div>
+                <div class="flex items-start gap-2 text-sm text-ink/70">
+                  <svg class="w-4 h-4 shrink-0 text-accent mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                  <span>Peserta Kompetisi GEMASTIK, Kategori Pengalaman Desain Pengguna — 2026</span>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-night text-slate-400 text-sm py-8">
+      <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row sm:justify-between gap-4">
+        <div>
+          <p class="font-display font-bold text-lg text-white">Saulina<span class="text-accent-light">.AI</span></p>
+          <p class="mt-1">Solusi kecerdasan buatan untuk bisnis Anda.</p>
+        </div>
+        <nav class="flex flex-wrap gap-x-5 gap-y-1 text-slate-300" aria-label="Navigasi footer">
+          <a href="index.html" class="hover:text-white transition">Landing Page</a>
+          <a href="blog.html" class="hover:text-white transition">Blog</a>
+          <a href="cv.html" class="hover:text-white transition">CV</a>
+        </nav>
+      </div>
+      <p class="max-w-4xl mx-auto px-4 mt-6 pt-4 border-t border-white/10 text-center">
+        &copy; 2026 Saulina AI &middot; CV Martha Saulina Nababan
+      </p>
+    </footer>
+  </body>
+</html>

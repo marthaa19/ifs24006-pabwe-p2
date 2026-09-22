@@ -1,0 +1,432 @@
+/* =========================================================
+   AKSARA.AI — LANDING PAGE STYLESHEET
+   CSS murni (tanpa Bootstrap/Tailwind), sesuai studi kasus 3.1.
+   Dipakai khusus oleh index.html.
+   ========================================================= */
+
+/* ---------- 1. CSS VARIABLES (design token) ---------- */
+:root {
+  --ink: #14121f;
+  --ink-soft: #5b5470;
+  --bg: #faf9fc;
+  --bg-alt: #f1eef8;
+  --line: #e3ddf0;
+
+  --violet: #6d28d9;
+  --violet-dark: #4c1d95;
+  --violet-soft: #ede9fe;
+  --teal: #0d9488;
+  --teal-soft: #ccfbf1;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+
+  --shadow: 0 20px 45px -20px rgba(76, 29, 149, 0.35);
+  --shadow-soft: 0 10px 25px -12px rgba(20, 18, 31, 0.18);
+
+  --maxw: 1160px;
+
+  --font-head: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+}
+
+/* ---------- 2. RESET DASAR ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  line-height: 1.15;
+  margin: 0 0 .6em;
+}
+
+p { margin: 0 0 1em; }
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+.wrap {
+  width: min(92%, var(--maxw));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--violet);
+  background: var(--violet-soft);
+  padding: .35em 1em;
+  border-radius: 999px;
+  margin-bottom: 1em;
+}
+
+/* ---------- 3. NAVBAR ---------- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 249, 252, .92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-block: .85rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.brand img { width: 34px; height: 34px; border-radius: 8px; }
+
+.brand span { color: var(--violet); }
+
+.menu-links {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.menu-links a {
+  font-size: .95rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  padding-block: .3rem;
+  border-bottom: 2px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
+}
+
+.menu-links a:hover,
+.menu-links a:focus-visible {
+  color: var(--violet);
+  border-color: var(--violet);
+}
+
+.menu-links a.is-active {
+  color: var(--violet);
+  border-color: var(--violet);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: .92rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.btn-solid {
+  background: var(--violet);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.btn-solid:hover { transform: translateY(-2px); background: var(--violet-dark); }
+
+.btn-ghost {
+  border-color: var(--line);
+  color: var(--ink);
+  background: #fff;
+}
+
+.btn-ghost:hover { border-color: var(--violet); color: var(--violet); }
+
+/* Mobile menu pakai elemen <details>/<summary> — CSS only, tanpa JS */
+.nav-mobile-toggle { display: none; }
+
+@media (max-width: 780px) {
+  .menu-links { display: none; }
+
+  .nav-mobile-toggle {
+    display: block;
+    position: relative;
+  }
+
+  .nav-mobile-toggle summary {
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 1;
+    padding: .2rem .5rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--line);
+  }
+
+  .nav-mobile-toggle summary::-webkit-details-marker { display: none; }
+
+  .nav-mobile-toggle .menu-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .9rem;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 1.4rem;
+    box-shadow: var(--shadow-soft);
+    min-width: 200px;
+  }
+}
+
+/* ---------- 4. HERO ---------- */
+.hero {
+  padding-block: clamp(3rem, 6vw, 6rem);
+  background: linear-gradient(180deg, var(--bg-alt), var(--bg) 70%);
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 4.2vw, 3.1rem);
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--violet);
+}
+
+.hero-lead {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.6rem;
+}
+
+.hero-visual {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 780px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .hero-visual { order: -1; }
+}
+
+/* ---------- 5. LAYANAN (grid) ---------- */
+.section { padding-block: clamp(3rem, 6vw, 5.5rem); }
+
+.section-alt { background: var(--bg-alt); }
+
+.section-head {
+  max-width: 62ch;
+  margin-inline: auto;
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.section-head h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.section-head p { color: var(--ink-soft); }
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1.8rem 1.6rem;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--violet);
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  background: var(--violet-soft);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-card:nth-child(even) .service-icon { background: var(--teal-soft); }
+
+.service-card h3 { font-size: 1.15rem; }
+
+.service-card p { color: var(--ink-soft); font-size: .95rem; margin-bottom: 0; }
+
+/* ---------- 6. TENTANG / STATISTIK ---------- */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.stat-box {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1.6rem 1.2rem;
+  text-align: center;
+}
+
+.stat-box strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1.9rem;
+  color: var(--violet);
+}
+
+.stat-box span {
+  font-size: .88rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- 7. KONTAK ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+@media (max-width: 780px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+.contact-info li {
+  display: flex;
+  gap: .8rem;
+  align-items: flex-start;
+  margin-bottom: 1.1rem;
+  color: var(--ink-soft);
+}
+
+.contact-info li strong { color: var(--ink); display: block; }
+
+.contact-form {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  box-shadow: var(--shadow-soft);
+  display: grid;
+  gap: 1rem;
+}
+
+.field label {
+  display: block;
+  font-size: .85rem;
+  font-weight: 600;
+  margin-bottom: .4rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: .7rem .9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  font: inherit;
+  background: var(--bg);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--violet);
+  outline-offset: 1px;
+}
+
+/* ---------- 8. FOOTER ---------- */
+.site-footer {
+  background: var(--ink);
+  color: #cfc9de;
+  padding-block: 2.4rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 780px) {
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+.footer-grid h4 {
+  color: #fff;
+  font-size: .95rem;
+  margin-bottom: .8rem;
+}
+
+.footer-grid a {
+  display: block;
+  color: #b7b0cc;
+  font-size: .9rem;
+  padding: .25rem 0;
+  transition: color .2s ease;
+}
+
+.footer-grid a:hover { color: var(--teal); }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.12);
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  text-align: center;
+  font-size: .82rem;
+  color: #8f88a8;
+}
