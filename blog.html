@@ -14,7 +14,7 @@
 
   <style>
     /* Penyesuaian kecil di luar utility Bootstrap, sesuai catatan studi kasus */
-    :root { --brand: #6d28d9; --brand-dark: #4c1d95; }
+    :root { --brand: #6d28d9; --brand-dark: #4c1d95; --brand-on-dark: #c4b5fd; }
     body { background: #f7f5fb; }
     .navbar-brand img { width: 32px; height: 32px; border-radius: 8px; }
     .btn-brand { background: var(--brand); color: #fff; }
@@ -22,7 +22,7 @@
     .text-brand { color: var(--brand) !important; }
     .badge-cat { background: var(--brand); }
     .card-cover { height: 190px; object-fit: cover; }
-    .nav-link.active-page { color: var(--brand) !important; font-weight: 700; border-bottom: 2px solid var(--brand); }
+    .nav-link.active-page { color: var(--brand-on-dark) !important; font-weight: 700; border-bottom: 2px solid var(--brand-on-dark); }
   </style>
 </head>
 <body>
@@ -61,19 +61,19 @@
     </div>
   </header>
 
-  <!-- FILTER KATEGORI SEDERHANA -->
-  <div class="container mt-4">
-    <div class="d-flex flex-wrap gap-2 justify-content-center">
-      <span class="badge rounded-pill text-bg-light border">Semua</span>
-      <span class="badge rounded-pill text-bg-light border">Generative AI</span>
-      <span class="badge rounded-pill text-bg-light border">Computer Vision</span>
-      <span class="badge rounded-pill text-bg-light border">Analitik Prediktif</span>
-      <span class="badge rounded-pill text-bg-light border">Etika AI</span>
-    </div>
-  </div>
-
   <!-- DAFTAR BLOG -->
   <main class="py-5">
+    <!-- FILTER KATEGORI SEDERHANA -->
+    <div class="container mb-4">
+      <div class="d-flex flex-wrap gap-2 justify-content-center">
+        <span class="badge rounded-pill text-bg-light border">Semua</span>
+        <span class="badge rounded-pill text-bg-light border">Generative AI</span>
+        <span class="badge rounded-pill text-bg-light border">Computer Vision</span>
+        <span class="badge rounded-pill text-bg-light border">Analitik Prediktif</span>
+        <span class="badge rounded-pill text-bg-light border">Etika AI</span>
+      </div>
+    </div>
+
     <div class="container">
       <div class="row g-4">
 
